@@ -1,0 +1,733 @@
+/* =========================================
+   1. ESTILOS GENERALES Y VARIABLES
+========================================= */
+:root {
+    --color-principal: #2c1810;
+    --color-acento: #d4a373;
+    --color-claro: #f4f1de;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto);
+    background-color: #faf9f6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+========================================= */
+.banner_top {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.banner_top a {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.banner_top a:hover {
+    text-decoration: underline;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.navegacion a {
+    color: var(--color-texto);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: var(--color-acento);
+}
+
+.navegacion .carrito {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+/* =========================================
+   3. SECCIÓN BIENVENIDA (HERO)
+========================================= */
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(44,24,16,0.8), rgba(44,24,16,0.8)), url('../imagenes/perfil.jfif') no-repeat center center/cover;
+    color: var(--color-blanco);
+}
+
+.bienvenida img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-acento);
+    margin-bottom: 20px;
+}
+
+.bienvenida h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.bienvenida p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+/* Botones de bienvenida */
+.bienvenida a {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+.bienvenida a:hover {
+    transform: translateY(-2px);
+}
+
+.btn-cotizar, .btn-principal {
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid var(--color-blanco);
+    color: var(--color-blanco);
+}
+
+/* =========================================
+   4. MENÚ / CARTA DE CÓCTELES (TABLA)
+========================================= */
+.seccion-menu-cocteles {
+    padding: 50px 5%;
+}
+
+.seccion-menu-cocteles h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-principal);
+}
+
+.filtros-categoria {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background-color: #e5e5e5;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-filtro.active, .btn-filtro:hover {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.tabla-menu {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.tabla-menu th, .tabla-menu td {
+    padding: 15px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.tabla-menu th {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.tabla-menu tr:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.img-mini {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.nombre-producto {
+    display: flex;
+    align-items: center;
+}
+
+.precio {
+    font-weight: bold;
+    color: #2b9348;
+}
+
+.btn-pedir, .btn-compra {
+    background-color: var(--color-acento);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-principal);
+    transition: background 0.2s;
+}
+
+.btn-pedir:hover, .btn-compra:hover {
+    background-color: #c38e5d;
+}
+
+/* =========================================
+   5. CARRUSEL / PRODUCTOS DESTACADOS
+========================================= */
+.carrusel-productos {
+    padding: 50px 5%;
+    background-color: #f0ede6;
+    overflow: hidden;
+}
+
+.carrusel-productos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-principal);
+}
+
+.carrusel-contenedor {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-acento) #e0dcd3;
+}
+
+.carrusel-contenedor::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrusel-contenedor::-webkit-scrollbar-track {
+    background: #e0dcd3;
+    border-radius: 4px;
+}
+
+.carrusel-contenedor::-webkit-scrollbar-thumb {
+    background-color: var(--color-acento);
+    border-radius: 4px;
+}
+
+.producto {
+    background: var(--color-blanco);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 250px;
+    max-width: 280px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.producto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   6. ESPECIALIDADES DE LA CASA
+========================================= */
+.especialidades-seccion {
+    padding: 50px 5%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-principal);
+}
+
+.contenedor-especialidades {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-especialidad {
+    background: var(--color-blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-especialidad {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e76f51;
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.img-especialidad {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-especialidad {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.precio-especialidad {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2b9348;
+    margin: 10px 0;
+}
+
+/* =========================================
+   7. PROMOCIONES Y OFERTAS
+========================================= */
+.seccion-promos {
+    padding: 50px 5%;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.seccion-promos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-blanco);
+}
+
+.contenedor-promos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-promo {
+    background: var(--color-blanco);
+    color: var(--color-texto);
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag-promo {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 15px;
+}
+
+.promo-dorada {
+    border: 2px solid var(--color-acento);
+}
+
+.precio-promo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2b9348;
+    margin: 15px 0;
+}
+
+.precio-antes {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* =========================================
+   8. CONSULTORÍA Y FICHAS TÉCNICAS
+========================================= */
+.seccion-consultoria {
+    padding: 50px 5%;
+}
+
+.seccion-consultoria > h2, .seccion-consultoria > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+}
+
+.contenedor-fichas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.ficha-producto {
+    background: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ficha-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+
+.ficha-header img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.ficha-header h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+
+.categoria-tag {
+    font-size: 0.75rem;
+    background: var(--color-acento);
+    color: var(--color-principal);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.ficha-cuerpo {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.ficha-cuerpo ul {
+    padding-left: 15px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.ficha-cuerpo li {
+    margin-bottom: 8px;
+}
+
+.ficha-footer {
+    padding: 15px;
+    background-color: #fafafa;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.btn-asesor {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-asesor:hover {
+    background-color: #1ebe5d;
+    color: white;
+}
+
+/* =========================================
+   9. QUIÉNES SOMOS / ENFOQUE COMERCIAL (NUEVA)
+========================================= */
+.seccion-nosotros {
+    padding: 60px 5%;
+    background-color: var(--color-blanco);
+}
+
+.contenedor-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.subtitulo-nosotros {
+    display: inline-block;
+    color: var(--color-acento);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.nosotros-contenido h2 {
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.ficha-fundadores p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.datos-nosotros {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    background-color: #faf9f6;
+    border-left: 4px solid var(--color-acento);
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.datos-nosotros li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: var(--color-texto);
+}
+
+.datos-nosotros li:last-child {
+    margin-bottom: 0;
+}
+
+.valores-nosotros {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.valor-item {
+    background-color: var(--color-claro);
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--color-principal);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.valor-item span {
+    font-size: 1.2rem;
+}
+
+/* Responsivo para la sección Quiénes Somos en pantallas pequeñas */
+@media (max-width: 900px) {
+    .contenedor-nosotros {
+        grid-template-columns: 1fr;
+    }
+    .nosotros-imagen img {
+        height: 320px;
+    }
+}
+
+/* =========================================
+   10. PREGUNTAS FRECUENTES (FAQ)
+========================================= */
+.seccion-faq {
+    margin-top: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccion-faq h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-principal);
+}
+
+.contenedor-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: var(--color-blanco);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.faq-item summary {
+    font-size: 1rem;
+    color: var(--color-principal);
+}
+
+.faq-item p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* =========================================
+   11. PIE DE PÁGINA (FOOTER)
+========================================= */
+.pie-pagina {
+    background-color: #1a0f0a;
+    color: var(--color-blanco);
+    padding: 50px 5% 20px 5%;
+}
+
+.contenedor-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.columna-footer h3, .columna-footer h4 {
+    color: var(--color-acento);
+    margin-bottom: 15px;
+}
+
+.columna-footer p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.links-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-footer li {
+    margin-bottom: 8px;
+}
+
+.links-footer a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.links-footer a:hover {
+    color: var(--color-acento);
+}
+
+.redes-sociales a {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-legal {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.aviso-licores {
+    margin-bottom: 8px;
+    color: #ffb703;
+}
