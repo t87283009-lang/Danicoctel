@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaniCoctel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="banner_top">
+            <a href="#">Cotiza tu evento en nuetra calculadora</a>
+        </div>
+
+        <!--barra de navegacion-->
+        <nav class="navegacion">
+        <div class="logo">D&Y Coctel</div>
+        <a href="#">Inicio</a>
+        <a href="#">Consultoria</a>
+        <a href="#">Promos</a>
+        <a href="#">Categoria</a>
+
+        <!--carrito-->
+        <a href="#" class="carrito">🛒</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bienvenida">
+            <img src="imagenes/perfil.jfif">
+            <h1>Bienvenidos a Dacni coctel</h1>
+            <p>Cotiza tus productos y cotiza tus eventos de forma facil.</p>
+            <a href="#" class="btn-cotizar">Ver productos</a>
+
+            <!--botones-->
+            <a href="#" class="btn-principal">Descubrir servicios</a>
+            <a href="#" class="btn-secundario">Contactanos</a>
+        </section>
+
+        <!-- Sección Quiénes Somos  -->
+        <section id="nosotros" class="seccion-nosotros">
+                <div class="contenedor-nosotros">
+
+                <div class="nosotros-imagen">
+                    <img src="imagenes/dueños.png.jpeg" alt="Dani y Yonny - D&Y Coctel">
+                </div>
+
+                <div class="nosotros-contenido">
+                    <span class="subtitulo-nosotros">Líderes en Coctelería Artesanal</span>
+                    <h2>Quiénes Somos</h2>
+                    
+                    <div class="ficha-fundadores">
+                        <p>
+                            En <strong>D&Y Coctel</strong>, liderado por <strong>Daniela y Yonny</strong>, no solo vendemos bebidas: creamos la experiencia perfecta para tus celebraciones. Nos especializamos en la producción y comercialización de cremas artesanales y cocteles listos para servir, diseñados para cautivar a los paladares más exigentes.
+                        </p>
+                        <p>
+                            Garantizamos un producto de alta rotación, ideal para eventos, reuniones y compras al por mayor. Cada botella combina ingredientes seleccionados, la cremosidad exacta y la graduación ideal para asegurar el éxito en la mesa de tus invitados.
+                        </p>
+                    </div>
+
+                    <!-- Ficha de Producto y Comercialización -->
+                    <ul class="datos-nosotros">
+                        <li><strong>Marca:</strong> D&Y Coctel (Dani & Yonny)</li>
+                        <li><strong>Línea de Negocio:</strong> Venta directa, pedidos para eventos y distribución al por mayor.</li>
+                        <li><strong>Ventaja Competitiva:</strong> Textura cremosa superior, 8 sabores exclusivos y presentación premium.</li>
+                        <li><strong>Garantía de Servicio:</strong> Atención personalizada, pedidos bajo agenda y envíos listos para consumir.</li>
+                    </ul>
+
+                    <div class="valores-nosotros">
+                        <div class="valor-item">
+                            <span>🍾</span>
+                            <strong>Listos para Servir</strong>
+                        </div>
+                        <div class="valor-item">
+                            <span>🔥</span>
+                            <strong>Alta Cremosidad</strong>
+                        </div>
+                        <div class="valor-item">
+                            <span>📦</span>
+                            <strong>Envíos & Eventos</strong>
+                        </div>
+            </div>
+            </section>
+
+            <!-- Carta / Menú de Cocteles -->
+             <section id="menu" class="seccion-menu-cocteles">
+            <h2>Nuestra Carta de Cocteles</h2>
+            
+            <!-- Filtros por categoría -->
+            <div class="filtros-categoria">
+                <button class="btn-filtro active">Todos</button>
+                <button class="btn-filtro">Cremas Artesanales</button>
+                <button class="btn-filtro">Cocteles Listos</button>
+                <button class="btn-filtro">Línea Dulce</button>
+            </div>
+
+            <!-- Tabla tipo Menú -->
+            <table class="tabla-menu">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <!-- 1. Crema de Aguardiente -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/01_crema_aguardiente.png" alt="Crema de Aguardiente" class="img-mini">
+                                <strong>Crema de Aguardiente</strong>
+                            </td>
+                            <td>Sabor tradicional anisado suave con textura cremosa artesanal.</td>
+                            <td class="precio">$35.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+
+                        <!-- 2. Crema de Coco -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/02_crema_coco.png" alt="Crema de Coco" class="img-mini">
+                                <strong>Crema de Coco</strong>
+                            </td>
+                            <td>Toque tropical dulce con intensa esencia de coco concentrado.</td>
+                            <td class="precio">$35.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+
+                        <!-- 3. Crema de Fresa -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/03_crema_fresa.png" alt="Crema de Fresa" class="img-mini">
+                                <strong>Crema de Fresa</strong>
+                            </td>
+                            <td>Textura suave e infusión de fresas seleccionadas.</td>
+                            <td class="precio">$35.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+
+                        <!-- 4. Piña Colada -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/04_pina_colada.png" alt="Piña Colada" class="img-mini">
+                                <strong>Piña Colada Cream</strong>
+                            </td>
+                            <td>Sabor tropical con crema de coco y piña madura.</td>
+                            <td class="precio">$38.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+
+                        <!-- 5. Crema de Maracuyá -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/05_crema_maracuya.png" alt="Crema de Maracuyá" class="img-mini">
+                                <strong>Crema de Maracuyá</strong>
+                            </td>
+                            <td>Mezcla cremosa con maracuyá natural y notas de ron.</td>
+                            <td class="precio">$38.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+
+                        <!-- 6. Crema de Frutos Rojos -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/06_crema_frutos_rojos.png" alt="Crema de Frutos Rojos" class="img-mini">
+                                <strong>Crema de Frutos Rojos</strong>
+                            </td>
+                            <td>Mezcla silvestre de mora, arándanos y frambuesa.</td>
+                            <td class="precio">$38.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+
+                        <!-- 7. Crema de Caramelo -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/07_crema_caramelo_sala​do.png" alt="Crema de Caramelo" class="img-mini">
+                                <strong>Crema de Caramelo</strong>
+                            </td>
+                            <td>Toffee suave con notas tostadas de caramelo artesanal.</td>
+                            <td class="precio">$36.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+
+                        <!-- 8. Crema de Chocolate -->
+                        <tr>
+                            <td class="nombre-producto">
+                                <img src="imagenes/08_crema_chocolate_artesanal.png" alt="Crema de Chocolate" class="img-mini">
+                                <strong>Crema de Chocolate</strong>
+                            </td>
+                            <td>Intenso sabor a cacao de alta calidad con textura aterciopelada.</td>
+                            <td class="precio">$36.000</td>
+                            <td><button class="btn-pedir">Pedir 🛒</button></td>
+                        </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--carrusel-->
+        <section class="carrusel-productos">
+            <h2>Productos destacados</h2>
+
+            <div class="carrusel-contenedor">
+
+                <article class="producto">
+                    <img src="imagenes/08_crema_chocolate_artesanal.png" alt="Crema de chocolate">
+                    <h3>Crema de Chocolate</h3>
+                    <p class="precio"></p>
+                    <button class="btn-compra">Agregar al carrito</button>
+                 </article>
+
+                <article class="producto">
+                    <img src="imagenes/07_crema_caramelo_sala​do.png" alt="Crema de Caramelo">
+                    <h3>Crema de Caramelo</h3>
+                    <p class="precio"></p>
+                    <button class="btn-compra">Agregar al carrito</button>
+                 </article>
+
+                <article class="producto">
+                    <img src="imagenes/06_crema_frutos_rojos.png" alt="Frutos Rojos">
+                    <h3>Crema de Frutos Rojos</h3>
+                    <p class="precio"></p>
+                    <button class="btn-compra">Agregar al carrito</button>
+                 </article>
+
+                <article class="producto">
+                    <img src="imagenes/05_crema_maracuya.png" alt="Crema de Maracuyá">
+                    <h3>Crema de Maracuyá</h3>
+                    <p class="precio"></p>
+                    <button class="btn-compra">Agregar al carrito</button>
+                 </article>
+
+                <article class="producto">
+                    <img src="imagenes/04_pina_colada.png" alt="Piña Colada">
+                    <h3>Piña Colada</h3>
+                    <p class="precio"></p>
+                    <button class="btn-compra">Agregar al carrito</button>
+                 </article>
+
+                <article class="producto">
+                    <img src="imagenes/03_crema_fresa.png" alt="Crema de Fresa">
+                    <h3>Crema de Fresa</h3>
+                    <p class="precio"></p>
+                    <button class="btn-compra">Agregar al carrito</button>
+                 </article>
+            </div>
+        </section>
+
+        <!-- Sección de Especialidades de la Casa -->
+        <section class="especialidades-seccion">
+            <h2 class="titulo-seccion">🌟 Especialidades de la Casa</h2>
+            
+            <div class="contenedor-especialidades">
+                
+                    <article class="tarjeta-especialidad">
+                        <span class="badge-especialidad">Más Vendido</span>
+                        <img src="imagenes/01_crema_aguardiente.png" alt="Crema de Aguardiente" class="img-especialidad">
+                        <div class="info-especialidad">
+                            <h3>Crema de Maracuyá</h3>
+                            <p>Nuestra receta secreta con la mezcla perfecta de acidez y dulzura. ¡El favorito de la casa!</p>
+                            <span class="precio-especialidad">$38.000</span>
+                            <button class="btn-pedir">Pedir 🛒</button>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-especialidad">
+                        <span class="badge-especialidad">Recomendado</span>
+                        <img src="imagenes/02_crema_coco.png" alt="Crema de Coco" class="img-especialidad">
+                        <div class="info-especialidad">
+                            <h3>Piña Colada Cream</h3>
+                            <p>Una explosión tropical ultra cremosa con ron premium y coco seleccionado.</p>
+                            <span class="precio-especialidad">$42.000</span>
+                            <button class="btn-pedir">Pedir 🛒</button>
+                        </div>
+                    </article>
+            </div>
+        </section>
+
+        <!-- Sección de Promociones y Ofertas -->
+        <section class="seccion-promos">
+            <h2>🔥 Promociones Imperdibles</h2>
+            
+            <div class="contenedor-promos">
+                
+                <article class="tarjeta-promo">
+                    <div class="tag-promo">¡OFERTA 3X2!</div>
+                    <h3>Lleva 3 Cremas y Paga 2</h3>
+                    <p>Combina tus sabores favoritos (Maracuyá, Fresa o Piña Colada). El de menor valor es gratis.</p>
+                    <span class="precio-promo">$70.000 <small class="precio-antes">$105.000</small></span>
+                    <button class="btn-pedir">Aprovechar Promo 🛒</button>
+                </article>
+
+                <article class="tarjeta-promo promo-dorada">
+                    <div class="tag-promo">2° A MITAD DE PRECIO</div>
+                    <h3>Combo Fiestero</h3>
+                    <p>Compras 1 Litro de Piña Colada y te llevas el segundo frasco al 50% de descuento.</p>
+                    <span class="precio-promo">$60.000 <small class="precio-antes">$80.000</small></span>
+                    <button class="btn-pedir">Aprovechar Promo 🛒</button>
+                </article>  
+            </div>
+        </section>
+
+            <!-- Sección de Consultoría -->
+            <section id="consultoria" class="seccion-consultoria">
+                <h2>Consultoría y Detalle de Productos</h2>
+                <p>Conoce las características, ingredientes y recomendaciones de conservación de nuestras 8 cremas artesanales.</p>
+
+                <!-- Fichas Técnicas de los 8 Productos -->
+                <div class="contenedor-fichas">
+
+                    <!-- 1. Crema de Aguardiente -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/01_crema_aguardiente.png" alt="Crema de Aguardiente">
+                            <div>
+                                <h3>Crema de Aguardiente</h3>
+                                <span class="categoria-tag">Crema Tradicional</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 15% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Sabor tradicional a anisado suave con textura cremosa.</li>
+                                <li><strong>Ingredientes:</strong> Base de aguardiente, crema de leche suave, leche condensada y toques de especias.</li>
+                                <li><strong>Conservación:</strong> Refrigerar. Servir muy frío o en las rocas.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Crema%20de%20Aguardiente" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                    <!-- 2. Crema de Coco -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/02_crema_coco.png" alt="Crema de Coco">
+                            <div>
+                                <h3>Crema de Coco</h3>
+                                <span class="categoria-tag">Sabor Tropical</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 12% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Dulce, tropical, con intensa esencia de coco concentrado.</li>
+                                <li><strong>Ingredientes:</strong> Crema de coco natural, leche condensada, base de licor y toques de vainilla.</li>
+                                <li><strong>Conservación:</strong> Mantener refrigerado. Agitar antes de servir.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Crema%20de%20Coco" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                    <!-- 3. Crema de Fresa -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/03_crema_fresa.png" alt="Crema de Fresa">
+                            <div>
+                                <h3>Crema de Fresa</h3>
+                                <span class="categoria-tag">Frutal Cremosa</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 12% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Dulce con balance de acidez natural de fresa.</li>
+                                <li><strong>Ingredientes:</strong> Infusión de fresas maduras, crema láctea y licor suave.</li>
+                                <li><strong>Conservación:</strong> Mantener refrigerado.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Crema%20de%20Fresa" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                    <!-- 4. Piña Colada -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/04_pina_colada.png" alt="Piña Colada">
+                            <div>
+                                <h3>Piña Colada Cream</h3>
+                                <span class="categoria-tag">Coctel Clásico</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 11% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Equilibrado entre la acidez de la piña y la cremosidad del coco.</li>
+                                <li><strong>Ingredientes:</strong> Extracto de piña seleccionada, crema de coco y ron blanco premium.</li>
+                                <li><strong>Conservación:</strong> Servir agitado con abundante hielo.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Piña%20Colada" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                    <!-- 5. Crema de Maracuyá -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/05_crema_maracuya.png" alt="Crema de Maracuyá">
+                            <div>
+                                <h3>Crema de Maracuyá</h3>
+                                <span class="categoria-tag">Especialidad de la Casa</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 12% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Cítrico refrescante mezclado con el dulce de la crema.</li>
+                                <li><strong>Ingredientes:</strong> Pulpa de maracuyá natural, leche condensada y ron especial.</li>
+                                <li><strong>Conservación:</strong> Refrigerar obligatoriamente.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Crema%20de%20Maracuyá" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                    <!-- 6. Crema de Frutos Rojos -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/06_crema_frutos_rojos.png" alt="Crema de Frutos Rojos">
+                            <div>
+                                <h3>Crema de Frutos Rojos</h3>
+                                <span class="categoria-tag">Edición Especial</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 12% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Mezcla silvestre de mora, arándanos y frambuesa con fondo cremoso.</li>
+                                <li><strong>Ingredientes:</strong> Reducción de frutos rojos naturales, leche condensada y licor base.</li>
+                                <li><strong>Conservación:</strong> Conservar en frío constante.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Crema%20de%20Frutos%20Rojos" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                    <!-- 7. Crema de Caramelo -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/07_crema_caramelo_sala​do.png" alt="Crema de Caramelo">
+                            <div>
+                                <h3>Crema de Caramelo</h3>
+                                <span class="categoria-tag">Línea Dulce</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 14% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Toffee suave con notas tostadas de caramelo artesanal.</li>
+                                <li><strong>Ingredientes:</strong> Caramelo elaborado en casa, crema láctea espesa y licor de caña.</li>
+                                <li><strong>Conservación:</strong> Mantener refrigerado o a temperatura fresca.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Crema%20de%20Caramelo" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                    <!-- 8. Crema de Chocolate -->
+                    <article class="ficha-producto">
+                        <div class="ficha-header">
+                            <img src="imagenes/08_crema_chocolate_artesanal.png" alt="Crema de Chocolate">
+                            <div>
+                                <h3>Crema de Chocolate</h3>
+                                <span class="categoria-tag">Línea Dulce / Postre</span>
+                            </div>
+                        </div>
+                        <div class="ficha-cuerpo">
+                            <ul>
+                                <li><strong>Grado de Alcohol:</strong> 14% Vol.</li>
+                                <li><strong>Sabor / Notas:</strong> Intenso sabor a cacao de alta calidad con textura aterciopelada.</li>
+                                <li><strong>Ingredientes:</strong> Cacao puro, crema de leche, leche condensada y ron ahumado.</li>
+                                <li><strong>Conservación:</strong> Servir muy frío. Ideal para acompañar postres.</li>
+                            </ul>
+                        </div>
+                        <div class="ficha-footer">
+                            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20asesoría%20sobre%20la%20Crema%20de%20Chocolate" class="btn-asesor" target="_blank">Asesorarme por WhatsApp 💬</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Preguntas Frecuentes (FAQ) -->
+                <div class="seccion-faq">
+                    <h3>❓ Preguntas Frecuentes</h3>
+                    
+                    <div class="contenedor-faq">
+                        <details class="faq-item">
+                            <summary><strong>¿Con cuánta anticipación debo hacer mi pedido para eventos?</strong></summary>
+                            <p>Para pedidos al por mayor o eventos especiales, te recomendamos hacer tu solicitud con al menos 3 a 5 días de anticipación para garantizar la disponibilidad de todos los sabores.</p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary><strong>¿Hacen envíos a domicilio?</strong></summary>
+                            <p>¡Sí! Realizamos domicilios locales y despachos a zonas cercanas. El costo del envío varía según la ubicación.</p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary><strong>¿Cómo se deben conservar las cremas y cocteles?</strong></summary>
+                            <p>Nuestras cremas artesanales deben mantenerse refrigeradas desde el momento de la entrega. Se recomienda agitar bien antes de consumir y servir muy frías.</p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary><strong>¿Tienen opciones de preparación personalizada o sin alcohol?</strong></summary>
+                            <p>Podemos personalizar garrafas o cócteles para eventos privados. Escríbenos a nuestra línea de asesoría por WhatsApp para cotizar tu menú personalizado.</p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+    </main>
+ 
+    <footer class="pie-pagina">
+    <div class="contenedor-footer">
+        
+        <!-- Columna 1: Marca y sobre nosotros -->
+        <div class="columna-footer">
+            <h3 class="logo-footer">Dacni Coctel</h3>
+            <p>Cremas y cocteles artesanales para tus mejores momentos y eventos especiales. Calidad y sabor único en cada botella.</p>
+        </div>
+
+        <!-- Columna 2: Enlaces rápidos -->
+        <div class="columna-footer">
+            <h4>Navegación</h4>
+            <ul class="links-footer">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú / Carta</a></li>
+                <li><a href="#promos">Promociones</a></li>
+                <li><a href="#consultoria">Consultoría & FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Contacto y Atención -->
+        <div class="columna-footer">
+            <h4>Contacto</h4>
+            <p>📍 Envíos locales y eventos</p>
+            <p>📱 WhatsApp: +57 300 000 0000</p>
+            <p>✉️ dacnicoctel@gmail.com</p>
+            <div class="redes-sociales">
+                <a href="#" target="_blank">Instagram</a> | 
+                <a href="#" target="_blank">Facebook</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Ley legal de licores y Copyright -->
+    <div class="footer-legal">
+        <p class="aviso-licores">🔞 Prohibido el expendio de bebidas embriagantes a menores de edad. El exceso de alcohol es perjudicial para la salud.</p>
+        <p class="copyright">&copy; 2026 Dacni Coctel. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
